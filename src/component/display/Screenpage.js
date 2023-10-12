@@ -4,7 +4,7 @@ import classess from './Screenpage.module.css'
 const Screenpage = () => {
   return (
     <div className={classess.maindiv}>
-      <img src={whock_a_hole} alt="whack_a_mole" />
+      {/* <img src={whock_a_hole} alt="whack_a_mole" /> */}
     </div>
   )
 }

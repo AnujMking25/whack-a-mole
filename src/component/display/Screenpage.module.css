@@ -1,6 +1,11 @@
 .maindiv{
-    margin-top: 1rem;
+   
     display: flex;
     justify-content: center;
+    margin: 1rem auto 0rem auto;
+    width: 30%;
     height: 50vh;
+    background-image: url('../../asset/whack-a-mole.png');
+    background-size: cover;
+    background-repeat: no-repeat;
 }

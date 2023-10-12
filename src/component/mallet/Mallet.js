@@ -5,7 +5,6 @@ const Mallet = () => {
     const [rotation, setRotation] = useState(0);
   
     const trackCursorPosition = (e) => {
-        // console.log(e.clientX);
       setPosition({ x: e.clientX-40, y: e.clientY-80 });
     };
   
@@ -16,7 +15,7 @@ const Mallet = () => {
   
     useEffect(() => {
       window.addEventListener('mousemove', trackCursorPosition);
-    });
+    },[]);
   
     const cursorStyle = {
       position: 'fixed',
