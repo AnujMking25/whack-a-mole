@@ -1,0 +1,9 @@
+.mallet {
+    width: 120px;
+    height: 120px;
+    background-image:url('../../asset/mallet4.png');
+    background-size: cover;
+    /* background-color: black; */
+    z-index: 9999;
+    transition: transform 0.3s;
+  }
