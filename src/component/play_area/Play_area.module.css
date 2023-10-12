@@ -1,0 +1,11 @@
+.maindiv{
+    display: flex;
+    justify-content: center;
+    top: 0;
+}
+.area{
+    width: 23rem; 
+    border-left: 150px solid transparent; 
+    border-right: 150px solid transparent;
+    border-bottom: 200px solid yellowgreen;
+}
