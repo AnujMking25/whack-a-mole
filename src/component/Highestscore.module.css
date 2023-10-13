@@ -1,0 +1,10 @@
+.maindiv{
+    width: 30%;
+    margin: 0 auto 0 auto;
+    border: 3px solid red;
+    border-style: double;
+    border-radius: 12px;
+    background-color: black;
+    color: wheat;
+    text-align: center;
+}

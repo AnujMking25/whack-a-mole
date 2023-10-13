@@ -15,11 +15,12 @@ const Play_area = () => {
      useEffect(()=>{
       const moleID=setTimeout(()=>{
         setshowMole(same)
-      },rondomTime(2000,3000))
+      },rondomTime(200,2000))
      },[same])
      
   return (
     <div className={classess.maindiv}>
+     <Mallet/>
       <div className={classess.playarea}>
       <div className={classess.hole}>
          <div className={classess.hole_top} >{(showMole===0) ? <Mole/>:null}</div>
@@ -31,7 +32,7 @@ const Play_area = () => {
         <div className={classess.hole_bottom}>{(showMole===4) ? <Mole/>:null}</div>
         </div>
       </div>
-      <Mallet/>
+     
     </div>
   )
 }

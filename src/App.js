@@ -1,3 +1,4 @@
+import Highestscore from "./component/Highestscore";
 import Screenpage from "./component/display/Screenpage";
 // import Mallet from "./component/mallet/Mallet";
 import Playarea from "./component/play_area/Playarea";
@@ -5,9 +6,9 @@ import Playarea from "./component/play_area/Playarea";
 function App() {
   return (
     <>
-     <Screenpage/>
-    
-     <Playarea/>
+      <Highestscore/>
+      <Screenpage/>
+      <Playarea/>
       {/* <Mallet/> */}
     </>
   );

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import classess from './Mallet.module.css'
 const Mallet = () => {
+
     const [position, setPosition] = useState({ x: 0, y: 0 });
     const [rotation, setRotation] = useState(0);
   
