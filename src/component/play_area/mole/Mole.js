@@ -1,7 +1,14 @@
-import classess from './Mole.module.css'
+import React from 'react';
+import classes from './Mole.module.css'
 const Mole = () => {
-    
-  return ( <div className={classess.mole}></div>
+  const onClickHnadler=()=>{
+    console.log('yeeee')
+  }
+  return ( 
+  <>
+  <div className={classes.mole} onClick={onClickHnadler}>
+  </div>
+</>
     )
 }
 

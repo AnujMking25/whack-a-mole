@@ -5,6 +5,7 @@
     background-size: cover;
     transform: translateX(0);
     animation: rise .3s ease-out;
+    background-color: black;
 
 }
 

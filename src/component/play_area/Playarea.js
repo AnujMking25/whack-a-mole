@@ -12,20 +12,18 @@ const Play_area = () => {
   if(same===showMole){
     setsame( Math.floor(Math.random()*5))
   }
-
-
      useEffect(()=>{
-      setTimeout(()=>{
+      const moleID=setTimeout(()=>{
         setshowMole(same)
-      },rondomTime(200,2000))
+      },rondomTime(2000,3000))
      },[same])
-    
+     
   return (
     <div className={classess.maindiv}>
       <div className={classess.playarea}>
       <div className={classess.hole}>
-         <div className={classess.hole_top}>{(showMole===0) ? <Mole/>:null}</div>
-         <div className={classess.hole_top}>{(showMole===1) ? <Mole/>:null}</div>
+         <div className={classess.hole_top} >{(showMole===0) ? <Mole/>:null}</div>
+         <div className={classess.hole_top}  >{(showMole===1) ? <Mole/>:null}</div>
       </div>
       <div className={classess.hole}>
         <div className={classess.hole_bottom}>{(showMole===2) ? <Mole/>:null}</div>

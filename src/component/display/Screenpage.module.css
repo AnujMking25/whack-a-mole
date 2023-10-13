@@ -1,11 +1,29 @@
 .maindiv{
    
     display: flex;
-    justify-content: center;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    align-items: end;
     margin: 1rem auto 0rem auto;
     width: 30%;
     height: 50vh;
     background-image: url('../../asset/whack-a-mole.png');
     background-size: cover;
     background-repeat: no-repeat;
+}
+.box{
+    margin-left: 2px;
+    width: 28%;
+    height: 30%;
+    padding:0 ;
+    background-color: black;
+    border: 3px solid whitesmoke;
+    border-style: double;
+    border-color: red;
+    border-radius: 12px;
+}
+.box h1,h3{
+    margin: 0;
+color: whitesmoke;
+text-align: center;
 }

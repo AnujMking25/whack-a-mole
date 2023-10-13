@@ -5,7 +5,7 @@ const Mallet = () => {
     const [rotation, setRotation] = useState(0);
   
     const trackCursorPosition = (e) => {
-      setPosition({ x: e.clientX-40, y: e.clientY-80 });
+      setPosition({ x: e.clientX, y: e.clientY-80 });
     };
   
     const rotateImage = () => {
