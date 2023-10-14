@@ -9,20 +9,22 @@
     text-align: center;
 }
 
-@media (min-width: 680px) and (max-width: 1024px) {
+@media (min-width: 614px) and (max-width: 1200px) {
+    .maindiv{width: 60%;}
     .maindiv h1{
         font-size: large;
     }
 }
-@media (min-width:564px) and (max-width: 680px) {
-    .maindiv{
-        width: 40%;
-        font-size: 10px;
-    }
-}
-@media (max-width: 563px) {
+
+@media (min-width:551px) and (max-width: 615px) {
     .maindiv{
         width: 50%;
         font-size: 10px;
     }
 }
+/* @media (max-width:565px) {
+    .maindiv{
+        width: 50%;
+        font-size: 10px;
+    }
+} */

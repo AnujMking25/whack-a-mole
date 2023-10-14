@@ -24,24 +24,34 @@
 color: wheat;
 text-align: center;
 }
-@media (min-width:681px) and (max-width:1024px) {
+@media (min-width:614px) and (max-width:1200px) {
+    .maindiv{
+        width: 60%;
+    }
     .box h1{
         font-size: medium;
     }
 }
-@media (min-width:564px) and (max-width:680px) {
+@media (min-width:614px) and (max-width:791px) {
 .maindiv{
-    width: 40%;
+    height: 40vh;
 }
-    .box h1{
-        font-size: small;
-    }
 }
-@media (max-width:563px){
+@media (min-width:551px) and (max-width: 615px){
     .maindiv{
         width: 50%;
+        height: 50vh;
     }  
     .box h1{
         font-size: small;
     }
 }
+/* @media (max-width:551px) {
+    .maindiv{
+        width: 50%;
+        height: 50vh;
+    }  
+    .box h1{
+        font-size: small;
+    }
+} */
