@@ -4,14 +4,12 @@ import { useDispatch } from 'react-redux';
 import {ScoreSliceAction} from '../../../store/ScoreSlice'
 const Mole = () => {
   const dispatch=useDispatch();
-  const onClickHnadler=()=>{
-    console.log('yeeee')
+  const onScoreHnadler=()=>{
     dispatch(ScoreSliceAction.scoreCounter({score:10}))
-
   }
   return ( 
   <>
-  <div className={classes.mole} onClick={onClickHnadler}>
+  <div className={classes.mole} onClick={onScoreHnadler}>
   </div>
 </>
     )

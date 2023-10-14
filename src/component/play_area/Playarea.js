@@ -6,27 +6,29 @@ import { useSelector } from 'react-redux'
 const Play_area = () => {
   const [showMole,setshowMole]=useState(null);
   const level=useSelector(state=>state.currScore.level);
-  const [same,setsame]=useState(0);
-    function rondomTime(min,max){
+  const [samePos,setsamePos]=useState(0);
+    function randomTime(min,max){
         return Math.round(Math.random()*(max-min)+min)
       }
 
-  if(same===showMole){
-    setsame( Math.floor(Math.random()*5))
+  if(samePos===showMole){
+    setsamePos( Math.floor(Math.random()*5))
+
   }
+  
      useEffect(()=>{
-      const moleID=setTimeout(()=>{
-        setshowMole(same)
-      },rondomTime(200,2000-level*200))
-     },[same])
+      setTimeout(()=>{
+        setshowMole(samePos)
+      },randomTime(1000,3000-level*200))
+     },[samePos,level])
      
   return (
     <div className={classess.maindiv}>
      <Mallet/>
       <div className={classess.playarea}>
       <div className={classess.hole}>
-         <div className={classess.hole_top} >{(showMole===0) ? <Mole/>:null}</div>
-         <div className={classess.hole_top}  >{(showMole===1) ? <Mole/>:null}</div>
+         <div className={classess.hole_top}>{(showMole===0) ? <Mole/>:null}</div>
+         <div className={classess.hole_top}>{(showMole===1) ? <Mole/>:null}</div>
       </div>
       <div className={classess.hole}>
         <div className={classess.hole_bottom}>{(showMole===2) ? <Mole/>:null}</div>

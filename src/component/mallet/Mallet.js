@@ -3,19 +3,21 @@ import classess from './Mallet.module.css'
 const Mallet = () => {
 
     const [position, setPosition] = useState({ x: 0, y: 0 });
-    const [rotation, setRotation] = useState(0);
+    const [rotation, setRotation] = useState(null);
   
     const trackCursorPosition = (e) => {
       setPosition({ x: e.clientX, y: e.clientY-80 });
     };
   
     const rotateImage = () => {
+      // console.log("I am click");
       setRotation(rotation - 45);
       setTimeout(()=>setRotation(0),100)
     };
   
     useEffect(() => {
       window.addEventListener('mousemove', trackCursorPosition);
+      
     },[]);
   
     const cursorStyle = {

@@ -6,7 +6,7 @@
     transform: translateX(0);
     animation: rise .3s ease-out;
     background-color: black;
-
+    /* position: absolute; */
 }
 
 @keyframes rise {
