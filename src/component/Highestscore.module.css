@@ -8,3 +8,21 @@
     color: wheat;
     text-align: center;
 }
+
+@media (min-width: 680px) and (max-width: 1024px) {
+    .maindiv h1{
+        font-size: large;
+    }
+}
+@media (min-width:564px) and (max-width: 680px) {
+    .maindiv{
+        width: 40%;
+        font-size: 10px;
+    }
+}
+@media (max-width: 563px) {
+    .maindiv{
+        width: 50%;
+        font-size: 10px;
+    }
+}

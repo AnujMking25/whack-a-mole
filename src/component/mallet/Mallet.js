@@ -9,8 +9,9 @@ const Mallet = () => {
   };
 
   const rotateImage = (e) => {
-  
-    e.persist()
+  console.log(e);
+    // e.preventDefault();
+e.stopPropagation();    
     setRotation(rotation - 45);
     setTimeout(() => setRotation(0), 100);
   };
@@ -30,7 +31,7 @@ const Mallet = () => {
     <div
       className={classess.mallet}
       style={cursorStyle}
-      onClick={rotateImage}
+      onClick={(e)=>rotateImage(e)}
     ></div>
   );
 };

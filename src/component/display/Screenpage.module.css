@@ -1,7 +1,5 @@
 .maindiv{
-   
     display: flex;
-    /* flex-direction: column; */
     justify-content: space-between;
     align-items: flex-end;
     margin: 0rem auto 0rem auto;
@@ -10,10 +8,10 @@
     background-image: url('../../asset/whack-a-mole.png');
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
 }
 .box{
     width: 28%;
-    height: 30%;
     padding:0 ;
     background-color: black;
     border: 3px solid whitesmoke;
@@ -25,4 +23,25 @@
     margin: 0;
 color: wheat;
 text-align: center;
+}
+@media (min-width:681px) and (max-width:1024px) {
+    .box h1{
+        font-size: medium;
+    }
+}
+@media (min-width:564px) and (max-width:680px) {
+.maindiv{
+    width: 40%;
+}
+    .box h1{
+        font-size: small;
+    }
+}
+@media (max-width:563px){
+    .maindiv{
+        width: 50%;
+    }  
+    .box h1{
+        font-size: small;
+    }
 }
