@@ -1,7 +1,9 @@
 import {createSlice} from '@reduxjs/toolkit'
+const totalScore=localStorage.getItem('Hscore')
 const inititalState={
     score:0,
-    Hscore:null
+    level:1,
+    Hscore:totalScore? totalScore:0
 }
 const ScoreSlice=createSlice({
     name:'ScoreManagement',
@@ -9,7 +11,14 @@ const ScoreSlice=createSlice({
     reducers:{
         scoreCounter(state,action){
             state.score=state.score+ action.payload.score;
-            console.log(state.score);
+            if(state.score%100===0){
+                state.level+=1
+            }
+            if(state.score>state.Hscore){
+                state.Hscore=state.score;
+                localStorage.setItem('Hscore',state.score);
+
+            }
         }
     }
 })

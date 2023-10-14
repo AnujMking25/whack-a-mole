@@ -2,8 +2,10 @@ import React, { useEffect, useState } from 'react'
 import classess from './Play_area.module.css' 
 import Mallet from '../mallet/Mallet'
 import Mole from './mole/Mole'
+import { useSelector } from 'react-redux'
 const Play_area = () => {
   const [showMole,setshowMole]=useState(null);
+  const level=useSelector(state=>state.currScore.level);
   const [same,setsame]=useState(0);
     function rondomTime(min,max){
         return Math.round(Math.random()*(max-min)+min)
@@ -15,7 +17,7 @@ const Play_area = () => {
      useEffect(()=>{
       const moleID=setTimeout(()=>{
         setshowMole(same)
-      },rondomTime(200,2000))
+      },rondomTime(200,2000-level*200))
      },[same])
      
   return (
