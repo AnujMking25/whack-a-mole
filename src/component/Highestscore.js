@@ -6,7 +6,7 @@ const Highestscore = () => {
   const Hscore=useSelector(state=>state.currScore.Hscore);
   return (
     <div className={classes.maindiv}>
-    <h1>Highest Score=&gt;<span style={{color:"#B6B5D8"}}>{Hscore}</span></h1>
+    <h1>Highest Score=<span style={{color:"#B6B5D8"}}>{Hscore}</span></h1>
     </div>
   )
 }

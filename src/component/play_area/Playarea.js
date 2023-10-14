@@ -15,11 +15,10 @@ const Play_area = () => {
     setsamePos( Math.floor(Math.random()*5))
 
   }
-  
      useEffect(()=>{
       setTimeout(()=>{
         setshowMole(samePos)
-      },randomTime(1000,3000-level*200))
+      },randomTime(200,3000-level*200))
      },[samePos,level])
      
   return (

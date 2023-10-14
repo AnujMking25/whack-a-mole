@@ -1,0 +1,27 @@
+.playgame{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+.playgame h1{
+    color: wheat;
+    display: block;
+   
+}
+
+.playgame button{
+    width: 9rem;
+    height: 4rem;
+    background-color: rgb(37, 59, 6);
+    border-radius: 3rem;
+    border: 2px solid yellowgreen;
+    font-size: x-large;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.playgame button:hover{
+    background-color: rgb(55, 80, 20);
+    border: 2px solid rgb(190, 237, 95);
+
+}
