@@ -5,6 +5,7 @@ import {ScoreSliceAction} from '../../../store/ScoreSlice'
 const Mole = () => {
   const dispatch=useDispatch();
   const onScoreHnadler=()=>{
+    console.log("l am mole");
     dispatch(ScoreSliceAction.scoreCounter({score:10}))
   }
   return ( 

@@ -7,9 +7,12 @@
 .playgame h1{
     color: wheat;
     display: block;
-   
 }
-
+.playgame img
+{
+    width: 30%;
+    margin-bottom: 1rem;
+}
 .playgame button{
     width: 9rem;
     height: 4rem;

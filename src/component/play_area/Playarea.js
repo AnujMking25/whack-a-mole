@@ -18,7 +18,7 @@ const Play_area = () => {
      useEffect(()=>{
       setTimeout(()=>{
         setshowMole(samePos)
-      },randomTime(200,3000-level*200))
+      },randomTime(100,2200-level*200))
      },[samePos,level])
      
   return (
