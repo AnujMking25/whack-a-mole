@@ -11,7 +11,7 @@ const ScoreSlice=createSlice({
     initialState:inititalState,
     reducers:{
         playgame(state){
-            state.playgame=true;
+            state.playgame=!state.playgame;
         },
         scoreCounter(state,action){
             state.score=state.score+ action.payload.score;
@@ -23,6 +23,10 @@ const ScoreSlice=createSlice({
                 localStorage.setItem('Hscore',state.score);
 
             }
+        },
+        reset(state){
+            state.score=0;
+            state.level=1;
         }
     }
 })

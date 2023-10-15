@@ -9,7 +9,7 @@ const playGame=useSelector(state=>state.currScore.playgame)
   return (
     <>
    { !playGame && <Playgame/>}
-     {playGame && <Highestscore/>}
+    {playGame && <Highestscore/>}
      {playGame && <Screenpage/>}
      {playGame &&<Playarea/>}
     </>

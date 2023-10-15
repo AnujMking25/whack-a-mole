@@ -80,13 +80,118 @@ overflow: hidden;
         height: 5rem;
     }
  }
- /* @media  (max-width:565px) {
+  @media (min-width:530px) and (max-width:551px) {
     .playarea{
-        width: 50%; 
+        width: 60%; 
      border-left: 5rem solid transparent; 
         border-right: 5rem solid transparent; 
+        border-bottom: 11rem solid yellowgreen;
     }
     .hole{
         height: 5rem;
     }
- } */
+ } 
+ @media (min-width:444px) and (max-width:530px) {
+    .playarea{
+        width: 60%; 
+     border-left: 5rem solid transparent; 
+        border-right: 5rem solid transparent; 
+        border-bottom: 11rem solid yellowgreen;
+    }
+        .hole_top{
+            width: 4rem;
+            height: 4rem;
+            border-radius: 2rem;
+        }
+        .hole_bottom{
+            width: 5rem;
+            height: 5rem;
+            border-radius: 2.5rem;
+        } 
+ }
+ @media (min-width:430px) and (max-width:444px) {
+    .playarea{
+        width: 60%; 
+     border-left: 4rem solid transparent; 
+        border-right: 4rem solid transparent; 
+        border-bottom: 10rem solid yellowgreen;
+    }
+    .hole{
+        height: 4rem;
+       } 
+       .hole_top{
+        width: 3rem;
+        height: 3rem;
+        border-radius: 1.5rem;
+    }
+    .hole_bottom{
+        width: 4rem;
+        height: 4rem;
+        border-radius: 2rem;
+    } 
+ }
+ @media (min-width:345px) and (max-width:430px){
+    .playarea{
+        width: 60%; 
+     border-left: 4rem solid transparent; 
+        border-right: 4rem solid transparent; 
+        border-bottom: 10rem solid yellowgreen;
+    }
+    .hole{
+        height: 4rem;
+       } 
+       .hole_top{
+        width: 4rem;
+        height: 4rem;
+        border-radius: 2rem;
+    }
+    .hole_bottom{
+        width: 5rem;
+        height: 5rem;
+        border-radius: 2.5rem;
+    } 
+ }
+
+ @media (min-width:321px) and (max-width:345px){
+    .playarea{
+        width: 60%; 
+     border-left: 4rem solid transparent; 
+        border-right: 4rem solid transparent; 
+        border-bottom: 10rem solid yellowgreen;
+    }
+    .hole{
+        height: 4rem;
+       } 
+       .hole_top{
+        width: 3.5rem;
+        height: 3.5rem;
+        border-radius: 2rem;
+    }
+    .hole_bottom{
+        width: 4rem;
+        height: 4rem;
+        border-radius: 2.rem;
+    } 
+ }
+
+ @media (min-width:200px) and (max-width:321px){
+    .playarea{
+        width: 60%; 
+     border-left: 3.5rem solid transparent; 
+        border-right: 3.5rem solid transparent; 
+        border-bottom: 8rem solid yellowgreen;
+    }
+    .hole{
+        height: 3rem;
+       } 
+       .hole_top{
+        width: 3.5rem;
+        height: 3.5rem;
+        border-radius: 2rem;
+    }
+    .hole_bottom{
+        width: 3.5rem;
+        height: 3.5rem;
+        border-radius: 1.8rem;
+    } 
+ }

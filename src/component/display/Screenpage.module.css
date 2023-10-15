@@ -9,15 +9,18 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    /* border-style: double; */
+    border: 1px solid black;
+    border-color: black;
 }
 .box{
     width: 28%;
     padding:0 ;
-    background-color: black;
+    background-color: green;
     border: 3px solid whitesmoke;
-    border-style: double;
-    border-color: red;
-    border-radius: 12px;
+    /* border-style: double; */
+    border:5px solid black;
+    border-radius: 12px 12px 0px 0px;
 }
 .box h1,h3{
     margin: 0;
@@ -34,24 +37,43 @@ text-align: center;
 }
 @media (min-width:614px) and (max-width:791px) {
 .maindiv{
-    height: 40vh;
+    height: 50vh;
 }
 }
 @media (min-width:551px) and (max-width: 615px){
     .maindiv{
         width: 50%;
-        height: 50vh;
+        height: 30vh;
     }  
     .box h1{
         font-size: small;
     }
 }
-/* @media (max-width:551px) {
+@media (min-width:391px) and (max-width:551px) {
     .maindiv{
-        width: 50%;
-        height: 50vh;
+        width: 60%;
+        height: 30vh;
     }  
     .box h1{
         font-size: small;
     }
-} */
+}
+@media (min-width:321px) and (max-width:392px) {
+    .maindiv{
+        width: 60%;
+        height: 30vh;
+    }
+    .box h1{
+        font-size: small;
+    }
+}
+
+@media (min-width:200px) and  (max-width:321px) {
+    .maindiv{
+        width: 60%;
+        height: 20vh;
+    }
+    .box h1{
+        font-size: small;
+    }
+}

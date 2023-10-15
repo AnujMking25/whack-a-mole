@@ -1,14 +1,35 @@
 .maindiv{
     width: 30%;
     margin: 0 auto 0 auto;
-    border: 3px solid red;
-    border-style: double;
-    border-radius: 12px;
-    background-color: black;
+    border: 3px solid black;
+    /* border-style: double; */
+    border-radius: 12px 12px 0px 0px;
+    background-color: green;
     color: wheat;
     text-align: center;
 }
+.fixedbutton{
+    width: 100%;
+    position:fixed;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
 
+}
+.exit{
+    
+    height: 2rem;
+    padding:0 12px 0 12px;
+    border:2px solid red;
+    color: red;
+    background-color: black;
+    border-radius: 10px;
+}
+@media (max-width:400px) {
+    .exit{
+        height: 1.5rem;
+    }
+}
 @media (min-width: 614px) and (max-width: 1200px) {
     .maindiv{width: 60%;}
     .maindiv h1{
@@ -22,9 +43,28 @@
         font-size: 10px;
     }
 }
-/* @media (max-width:565px) {
+@media (min-width:429px) and (max-width:551px) {
     .maindiv{
-        width: 50%;
+        width: 60%;
+        font-size: 10px;
+    } 
+}
+@media (min-width:345px) and (max-width:430px) {
+    .maindiv{
+        width: 60%;
         font-size: 10px;
     }
-} */
+}
+@media (min-width:321px) and (max-width:345px) {
+    .maindiv{
+        width: 60%;
+        font-size: 8px;
+    }
+}
+
+@media (min-width:200px) and (max-width:321px) {
+    .maindiv{
+        width: 60%;
+        font-size: 8px;
+    }
+}

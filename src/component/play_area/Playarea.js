@@ -7,6 +7,7 @@ const Play_area = () => {
   const [showMole,setshowMole]=useState(null);
   const level=useSelector(state=>state.currScore.level);
   const [samePos,setsamePos]=useState(0);
+  const [clearTime,setClearTime]=useState();
     function randomTime(min,max){
         return Math.round(Math.random()*(max-min)+min)
       }
@@ -14,11 +15,20 @@ const Play_area = () => {
   if(samePos===showMole){
     setsamePos( Math.floor(Math.random()*5))
 
+  } 
+  function onsetTimer(){
+const clearTimeId=setTimeout(()=>{
+  setshowMole(samePos)
+},randomTime(100,2200-level*200));
+return clearTimeId
+}
+  function clearTimer(){
+    clearTimeout(clearTime);
+    setClearTime(onsetTimer())
   }
      useEffect(()=>{
-      setTimeout(()=>{
-        setshowMole(samePos)
-      },randomTime(100,2200-level*200))
+       
+      setClearTime(onsetTimer());
      },[samePos,level])
      
   return (
@@ -26,13 +36,13 @@ const Play_area = () => {
      <Mallet/>
       <div className={classess.playarea}>
       <div className={classess.hole}>
-         <div className={classess.hole_top}>{(showMole===0) ? <Mole/>:null}</div>
-         <div className={classess.hole_top}>{(showMole===1) ? <Mole/>:null}</div>
+         <div className={classess.hole_top}>{(showMole===0) ? <Mole onClearTimeId={clearTimer}/>:null}</div>
+         <div className={classess.hole_top}>{(showMole===1) ? <Mole onClearTimeId={clearTimer}/>:null}</div>
       </div>
       <div className={classess.hole}>
-        <div className={classess.hole_bottom}>{(showMole===2) ? <Mole/>:null}</div>
-        <div className={classess.hole_bottom}>{(showMole===3) ? <Mole/>:null}</div>
-        <div className={classess.hole_bottom}>{(showMole===4) ? <Mole/>:null}</div>
+        <div className={classess.hole_bottom}>{(showMole===2) ? <Mole onClearTimeId={clearTimer}/>:null}</div>
+        <div className={classess.hole_bottom}>{(showMole===3) ? <Mole onClearTimeId={clearTimer}/>:null}</div>
+        <div className={classess.hole_bottom}>{(showMole===4) ? <Mole onClearTimeId={clearTimer}/>:null}</div>
         </div>
       </div>
      
