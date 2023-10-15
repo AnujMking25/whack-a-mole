@@ -2,17 +2,38 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    width: 100vw;
     height: 100vh;
+    color: white;
 }
 .playgame h1{
-    color: wheat;
+    color: white;
     display: block;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+    animation: slideH1 1s ease-in;
 }
+@keyframes slideH1 {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
 .playgame img
 {
     width: 30%;
     margin-bottom: 1rem;
+    animation: slideImg 1s ease-in;
 }
+@keyframes slideImg {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
 .playgame button{
     width: 9rem;
     height: 4rem;
@@ -22,6 +43,7 @@
     font-size: x-large;
     color: white;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    animation: slideH1 1s ease-in;
 }
 .playgame button:hover{
     background-color: rgb(55, 80, 20);

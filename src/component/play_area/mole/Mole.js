@@ -8,17 +8,16 @@ const Mole = ({onClearTimeId}) => {
   
 const sound = new Audio(audioPath)
   const onScoreHnadler=()=>{
-    console.log("l am mole");
     sound.play();
     onClearTimeId();
     dispatch(ScoreSliceAction.scoreCounter({score:10}))
   }
   return ( 
   <>
-  <div className={classes.mole} onClick={onScoreHnadler}>
-  </div>
+  <div className={classes.mole} onClick={onScoreHnadler}></div>
 </>
     )
 }
 
 export default Mole
+

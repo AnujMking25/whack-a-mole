@@ -9,15 +9,18 @@ const Mallet = () => {
   };
 
   const rotateImage = (e) => {
-  console.log(e);
-    // e.preventDefault();
-e.stopPropagation();    
+ 
+  console.log("Mallet"); 
+  
     setRotation(rotation - 45);
     setTimeout(() => setRotation(0), 100);
   };
 
   useEffect(() => {
     window.addEventListener("mousemove", trackCursorPosition);
+     return () => {
+      window.removeEventListener("mousemove", trackCursorPosition);
+    };
   }, []);
 
   const cursorStyle = {
