@@ -4,7 +4,7 @@
     align-items: flex-end;
     margin: 0rem auto 0rem auto;
     width: 30%;
-    height: 40vh;
+    height: 18rem;
     background-image: url('../../asset/whack-a-mole.png');
     background-size: cover;
     background-repeat: no-repeat;
@@ -28,60 +28,93 @@ text-align: center;
 @media (min-width:830px) and (max-width:1200px){
     .maindiv{
         width: 60%;
-        height: 50vh;
+        height:30rem;
     }
     .box h1{
         font-size: medium;
     }
 }
-@media (min-width:614px) and (max-width:831px){
+@media (min-width:655px) and (max-width:831px){
 .maindiv{
     width: 60%;
-    height: 40vh;
+    height: 25rem;
 }
 }
+@media (min-width:614px) and (max-width: 655px)
+{.maindiv{
+    width: 60%;
+    height: 25rem;
+}}
 @media (min-width:551px) and (max-width: 615px){
     .maindiv{
         width: 50%;
-        height: 25vh;
+        height: 18rem;
     }  
     .box h1{
         font-size: small;
     }
 }
-@media (min-width:391px) and (max-width:551px){
+@media (min-width:501px) and (max-width:551px){
     .maindiv{
         width: 60%;
-        height: 30vh;
+        height:18rem;
     }  
     .box h1{
         font-size: small;
     }
 }
-@media (min-width:321px) and (max-width:392px) {
+@media (min-width:391px) and (max-width:502px){
     .maindiv{
         width: 60%;
-        height: 30vh;
+        height:15rem;
+    }  
+    .box h1{
+        font-size: small;
+    }
+}
+@media (min-width:321px) and (max-width:392px){
+    .maindiv{
+        width: 60%;
+        height: 13rem;
     }
     .box h1{
         font-size: small;
     }
 }
 
-@media (min-width:212px) and  (max-width:321px) {
+@media (min-width:267px) and  (max-width:321px) {
     .maindiv{
         width: 60%;
-        height: 30vh;
+        height: 10rem;
     }
     .box h1{
         font-size: small;
     }
 }
+@media (min-width:223px) and (max-width:268px){
+    .maindiv{
+        width: 60%;
+        height: 9rem;
+    }
+    .box h1{
+        font-size: small;
+    }
+}
+@media (min-width:213px) and (max-width:224px){
+    .maindiv{
+        width: 60%;
+        height: 8rem;
+    }
+    .box h1{
+        font-size: small;
+    }
+
+}
 @media (max-width:213px){
     .maindiv{
         width: 50%;
         /* font-size: 6px; */
-        height: 15vh;
+        height: 7rem;
     }
     .box h1,h3{
         font-size: 6px;
