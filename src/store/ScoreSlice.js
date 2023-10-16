@@ -14,6 +14,11 @@ const ScoreSlice=createSlice({
         playgame(state){
             state.playgame=!state.playgame;
         },
+        playAgain(state){
+            state.playgame=!state.playgame;
+            state.score=0;
+            state.level=1;
+        },
         scoreCounter(state,action){
             state.score=state.score+ action.payload.score;
             if(state.score%100===0){
