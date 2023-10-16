@@ -4,6 +4,7 @@ const inititalState={
     playgame:false,
     score:0,
     level:1,
+    timeReset:false,
     Hscore:totalScore? totalScore:0
 }
 const ScoreSlice=createSlice({
@@ -27,6 +28,10 @@ const ScoreSlice=createSlice({
         reset(state){
             state.score=0;
             state.level=1;
+            state.timeReset=true;
+        },
+        resetTime(state){
+            state.timeReset=false;
         }
     }
 })

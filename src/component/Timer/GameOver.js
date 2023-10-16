@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector} from 'react-redux';
 import { ScoreSliceAction } from '../../store/ScoreSlice';
 
 const GameOver = () => {
-  const [minutes, setMinutes] = useState(2);
+    const [minutes, setMinutes] = useState(2);
   const [seconds, setSeconds] = useState(0);
+  const timeReset=useSelector(state=>state.currScore.timeReset);
     const dispatch=useDispatch();
   useEffect(() => {
+   
     let timer = setInterval(() => {
       if (minutes === 0 && seconds === 0) {
         clearInterval(timer);
@@ -18,11 +20,18 @@ const GameOver = () => {
         setSeconds(seconds - 1);
       }
     }, 1000);
-
+    if(timeReset){
+        clearInterval(timer);
+        setMinutes(2);
+        setSeconds(0)
+        dispatch(ScoreSliceAction.resetTime())
+    }
+    
     return () => {
       clearInterval(timer);
+      
     };
-  }, [minutes, seconds]);
+  }, [minutes, seconds,timeReset]);
 
   return (
     <div style={{borderBottom:"1px solid black"}}>

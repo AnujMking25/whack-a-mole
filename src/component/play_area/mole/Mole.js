@@ -9,7 +9,7 @@ const Mole = ({onClearTimeId}) => {
 const sound = new Audio(audioPath)
   const onScoreHnadler=()=>{
     sound.play();
-    onClearTimeId();
+    onClearTimeId(50,50);
     dispatch(ScoreSliceAction.scoreCounter({score:10}))
   }
   return ( 

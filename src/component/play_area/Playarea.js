@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react'
 import classess from './Play_area.module.css' 
 import Mallet from '../mallet/Mallet'
 import Mole from './mole/Mole'
-import { useSelector } from 'react-redux'
 const Play_area = () => {
   const [showMole,setshowMole]=useState(null);
-  const level=useSelector(state=>state.currScore.level);
+  const [min,setMin]=useState(1500);
+  const [max,setMax]=useState(2000);
   const [samePos,setsamePos]=useState(0);
   const [clearTime,setClearTime]=useState();
     function randomTime(min,max){
@@ -16,20 +16,22 @@ const Play_area = () => {
     setsamePos( Math.floor(Math.random()*5))
 
   } 
-  function onsetTimer(){
+  function onsetTimer(min,max){
 const clearTimeId=setTimeout(()=>{
   setshowMole(samePos)
-},randomTime(2000,4000-level*200));
+},randomTime(min,max));
 return clearTimeId
 }
-  function clearTimer(){
+  function clearTimer(minT,maxT){
     clearTimeout(clearTime);
-    setClearTime(onsetTimer())
+    setMin(min-minT);
+    setMax(max-maxT)
+    setClearTime(onsetTimer(min-minT,max-maxT))
   }
      useEffect(()=>{
        
-      setClearTime(onsetTimer());
-     },[samePos,level])
+      setClearTime(onsetTimer(min,max));
+     },[samePos])
      
   return (
     <div className={classess.maindiv}>
