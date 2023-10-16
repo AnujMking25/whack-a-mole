@@ -5,6 +5,7 @@
     width: 100vw;
     height: 100vh;
     color: white;
+    
 }
 .playgame h1{
     color: white;
@@ -49,4 +50,22 @@
     background-color: rgb(55, 80, 20);
     border: 2px solid rgb(190, 237, 95);
 
+}
+.instruction{
+  width: 50%;
+  /* padding: 5px; */
+  text-align: justify;
+}
+@media (max-width:450px){
+  .playgame button{
+    width: 5rem;
+    height: 2rem;
+    font-size: medium;
+}
+}
+@media (max-width:250px){
+
+  .playgame h1,h2{
+    font-size: medium;
+  }
 }

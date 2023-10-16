@@ -13,6 +13,7 @@ const Playgame = () => {
     <img src={Whackimage} alt="whack-a-mole.png" />
     <button onClick={()=>dispatch(ScoreSliceAction.playgame())}>Let's Play</button>
    <h2>Instructions :—-</h2>
+   <div className={classes.instruction}>
    <p>Move the mallet and press double click to hit the mole peeping out from the hole.</p>
     <p>Earn 10 points by hitting mole everytime.</p>
     <p>Points which you earned shown on the bottom of display area.</p>
@@ -20,6 +21,7 @@ const Playgame = () => {
     <p>Highest score reflect on top of the display area.</p>
     <p>Click on refresh ↺ button to reset and start again.</p>
     <p>Click on cross ❎ button to exit.</p>
+    </div>
     </div>
   )
 }
