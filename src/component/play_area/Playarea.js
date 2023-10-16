@@ -19,7 +19,7 @@ const Play_area = () => {
   function onsetTimer(){
 const clearTimeId=setTimeout(()=>{
   setshowMole(samePos)
-},randomTime(100,2200-level*200));
+},randomTime(2000,4000-level*200));
 return clearTimeId
 }
   function clearTimer(){
