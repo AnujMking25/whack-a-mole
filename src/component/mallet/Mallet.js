@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import classess from "./Mallet.module.css";
+import mallet from '../../asset/mallet5.png';
 const Mallet = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [rotation, setRotation] = useState(null);
@@ -8,7 +9,7 @@ const Mallet = () => {
     setPosition({ x: e.clientX, y: e.clientY - 80 });
   };
 
-  const rotateImage = (e) => {
+  const rotateImage = () => {
  
   console.log("Mallet"); 
   
@@ -18,6 +19,10 @@ const Mallet = () => {
 
   useEffect(() => {
     window.addEventListener("mousemove", trackCursorPosition);
+    window.addEventListener("click",()=>{
+      console.log("Mallet clicked!!");
+      rotateImage()
+    })
      return () => {
       window.removeEventListener("mousemove", trackCursorPosition);
     };
@@ -31,11 +36,9 @@ const Mallet = () => {
   };
 
   return (
-    <div
-      className={classess.mallet}
-      style={cursorStyle}
-      onClick={(e)=>rotateImage(e)}
-    ></div>
+    <div className={classess.mallet}>
+      <img style={cursorStyle}  src={mallet} alt="mallet.png" />
+    </div>
   );
 };
 
