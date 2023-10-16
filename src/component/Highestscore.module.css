@@ -17,7 +17,7 @@
 
 }
 .exit{
-    
+    width:4rem;
     height: 2rem;
     padding:0 12px 0 12px;
     border:2px solid black;
@@ -27,6 +27,7 @@
 }
 @media (max-width:400px) {
     .exit{
+        width: 3rem;
         height: 1.5rem;
     }
 }
@@ -62,9 +63,18 @@
     }
 }
 
-@media (min-width:200px) and (max-width:321px) {
+@media (min-width:212px) and (max-width:321px) {
+    .exit{
+        width: 2rem;
+    }
     .maindiv{
         width: 60%;
         font-size: 8px;
+    }
+}
+@media (max-width:213px){
+    .maindiv{
+        width: 50%;
+        font-size: 6px;
     }
 }

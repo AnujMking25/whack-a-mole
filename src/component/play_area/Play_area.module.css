@@ -174,7 +174,7 @@ overflow: hidden;
     } 
  }
 
- @media (min-width:200px) and (max-width:321px){
+ @media (min-width:212px) and (max-width:321px){
     .playarea{
         width: 60%; 
      border-left: 3.5rem solid transparent; 
@@ -193,5 +193,27 @@ overflow: hidden;
         width: 3.5rem;
         height: 3.5rem;
         border-radius: 1.8rem;
+    } 
+ }
+ 
+ @media (max-width:213px){
+    .playarea{
+        width: 50%; 
+     border-left: 3rem solid transparent; 
+        border-right: 3rem solid transparent; 
+        border-bottom: 7rem solid yellowgreen;
+    }
+    .hole{
+        height: 3rem;
+       } 
+       .hole_top{
+        width: 2rem;
+        height: 2rem;
+        border-radius: 1rem;
+    }
+    .hole_bottom{
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 1.2rem;
     } 
  }

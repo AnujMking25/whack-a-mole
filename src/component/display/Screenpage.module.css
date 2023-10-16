@@ -68,12 +68,22 @@ text-align: center;
     }
 }
 
-@media (min-width:200px) and  (max-width:321px) {
+@media (min-width:212px) and  (max-width:321px) {
     .maindiv{
         width: 60%;
         height: 20vh;
     }
     .box h1{
         font-size: small;
+    }
+}
+@media (max-width:213px){
+    .maindiv{
+        width: 50%;
+        /* font-size: 6px; */
+        height: 15vh;
+    }
+    .box h1,h3{
+        font-size: 6px;
     }
 }
