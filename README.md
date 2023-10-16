@@ -1,8 +1,6 @@
 # Whack-A-Mole
 
-#Creact Using React
-
-## Available Scripts
+## Creact Using React
 
 In the project directory, you can run:
 
