@@ -4,12 +4,11 @@
     align-items: flex-end;
     margin: 0rem auto 0rem auto;
     width: 30%;
-    height: 50vh;
+    height: 40vh;
     background-image: url('../../asset/whack-a-mole.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    /* border-style: double; */
     border: 1px solid black;
     border-color: black;
 }
@@ -18,7 +17,6 @@
     padding:0 ;
     background-color: green;
     border: 3px solid whitesmoke;
-    /* border-style: double; */
     border:5px solid black;
     border-radius: 12px 12px 0px 0px;
 }
@@ -27,29 +25,31 @@
 color: wheat;
 text-align: center;
 }
-@media (min-width:614px) and (max-width:1200px) {
+@media (min-width:830px) and (max-width:1200px){
     .maindiv{
         width: 60%;
+        height: 50vh;
     }
     .box h1{
         font-size: medium;
     }
 }
-@media (min-width:614px) and (max-width:791px) {
+@media (min-width:614px) and (max-width:831px){
 .maindiv{
-    height: 50vh;
+    width: 60%;
+    height: 40vh;
 }
 }
 @media (min-width:551px) and (max-width: 615px){
     .maindiv{
         width: 50%;
-        height: 30vh;
+        height: 25vh;
     }  
     .box h1{
         font-size: small;
     }
 }
-@media (min-width:391px) and (max-width:551px) {
+@media (min-width:391px) and (max-width:551px){
     .maindiv{
         width: 60%;
         height: 30vh;
@@ -71,7 +71,7 @@ text-align: center;
 @media (min-width:212px) and  (max-width:321px) {
     .maindiv{
         width: 60%;
-        height: 20vh;
+        height: 30vh;
     }
     .box h1{
         font-size: small;
