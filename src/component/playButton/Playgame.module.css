@@ -5,7 +5,11 @@
     width: 100vw;
     height: 100vh;
     color: white;
+    text-align: center;
     
+}
+.playgame ul li{
+  padding: 0px 20px 0px 5px;
 }
 .playgame h1{
     color: white;
