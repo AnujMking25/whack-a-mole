@@ -10,9 +10,6 @@ const Mallet = () => {
   };
 
   const rotateImage = () => {
- 
-  console.log("Mallet"); 
-  
     setRotation(rotation - 45);
     setTimeout(() => setRotation(0), 100);
   };
@@ -20,7 +17,6 @@ const Mallet = () => {
   useEffect(() => {
     window.addEventListener("mousemove", trackCursorPosition);
     window.addEventListener("click",()=>{
-      console.log("Mallet clicked!!");
       rotateImage()
     })
      return () => {

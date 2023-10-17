@@ -2,49 +2,48 @@ import React, { useEffect, useState } from 'react'
 import classess from './Play_area.module.css' 
 import Mallet from '../mallet/Mallet'
 import Mole from './mole/Mole'
+import { useSelector } from 'react-redux'
 const Play_area = () => {
-  const [showMole,setshowMole]=useState(null);
-  const [min,setMin]=useState(1500);
-  const [max,setMax]=useState(2000);
-  const [samePos,setsamePos]=useState(0);
-  const [clearTime,setClearTime]=useState();
-    function randomTime(min,max){
-        return Math.round(Math.random()*(max-min)+min)
-      }
+const [timer,setTimer]=useState(3000);
+const [showMole,setshowMole]=useState(null);
+const [removeMole,setRemoveMole]=useState(null);
+const score=useSelector(state=>state.currScore.score);
 
-  if(samePos===showMole){
-    setsamePos( Math.floor(Math.random()*5))
-
-  } 
-  function onsetTimer(min,max){
-const clearTimeId=setTimeout(()=>{
-  setshowMole(samePos)
-},randomTime(min,max));
-return clearTimeId
-}
-  function clearTimer(minT,maxT){
-    clearTimeout(clearTime);
-    setMin(min-minT);
-    setMax(max-maxT)
-    setClearTime(onsetTimer(min-minT,max-maxT))
+function onRemoveMole(){
+  setshowMole(Math.floor(Math.random()*5));
+  if(timer>100){
+    setTimer(timer-50)
   }
-     useEffect(()=>{
-       
-      setClearTime(onsetTimer(min,max));
-     },[samePos])
-     
+  
+}
+useEffect(()=>{
+  console.log("useEffect");
+  if(score===0){
+setTimer(3000)
+  }
+if(removeMole){
+  console.log("Is clear");
+  clearInterval(removeMole)
+}
+console.log(timer);
+  const id=setInterval(()=>{
+  setshowMole(Math.floor(Math.random()*5));
+  },timer)
+
+  setRemoveMole(id)
+},[timer,score])
   return (
     <div className={classess.maindiv}>
      <Mallet/>
       <div className={classess.playarea}>
       <div className={classess.hole}>
-         <div className={classess.hole_top}>{(showMole===0) ? <Mole onClearTimeId={clearTimer}/>:null}</div>
-         <div className={classess.hole_top}>{(showMole===1) ? <Mole onClearTimeId={clearTimer}/>:null}</div>
+         <div className={classess.hole_top}>{(showMole===0) ? <Mole onRemoveMole={onRemoveMole}/>:null}</div>
+         <div className={classess.hole_top}>{(showMole===1) ? <Mole onRemoveMole={onRemoveMole}/>:null}</div>
       </div>
       <div className={classess.hole}>
-        <div className={classess.hole_bottom}>{(showMole===2) ? <Mole onClearTimeId={clearTimer}/>:null}</div>
-        <div className={classess.hole_bottom}>{(showMole===3) ? <Mole onClearTimeId={clearTimer}/>:null}</div>
-        <div className={classess.hole_bottom}>{(showMole===4) ? <Mole onClearTimeId={clearTimer}/>:null}</div>
+        <div className={classess.hole_bottom}>{(showMole===2) ? <Mole onRemoveMole={onRemoveMole}/>:null}</div>
+        <div className={classess.hole_bottom}>{(showMole===3) ? <Mole onRemoveMole={onRemoveMole}/>:null}</div>
+        <div className={classess.hole_bottom}>{(showMole===4) ? <Mole onRemoveMole={onRemoveMole}/>:null}</div>
         </div>
       </div>
      

@@ -22,9 +22,9 @@ if(score>0){
     {score>0 ? <h2>Your Score:{score}</h2>:null}
     <button onClick={onplayAndPlayAgain}>{(score ===0) ? `Let's Play`:`Play again`}</button>
    
-   {playGame && <div><h2>Instructions :—-</h2>
+   {!playGame && <div><h2>Instructions :—-</h2>
    <div className={classes.instruction}>
-   <p>Move the mallet and press double click to hit the mole peeping out from the hole.</p>
+   <p>Move the mallet and press single click to hit the mole peeping out from the hole.</p>
     <p>Earn 10 points by hitting mole everytime.</p>
     <p>Points which you earned shown on the bottom of display area.</p>
     <p>Level increase by Hitting more and more mole .</p>
