@@ -24,13 +24,17 @@ if(score>0){
    
    {!playGame && <div><h2>Instructions :—-</h2>
    <div className={classes.instruction}>
-   <p>Move the mallet and press single click to hit the mole peeping out from the hole.</p>
-    <p>Earn 10 points by hitting mole everytime.</p>
-    <p>Points which you earned shown on the bottom of display area.</p>
-    <p>Level increase by Hitting more and more mole .</p>
-    <p>Highest score reflect on top of the display area.</p>
-    <p>Click on refresh ↺ button to reset and start again.</p>
-    <p>Click on cross ❎ button to exit.</p>
+   <ul>
+   <li>Move the mallet on Mole and press single click to hit the mole peeping out from the hole.</li>
+    <li>Earn 10 points by hitting mole everytime.</li>
+    <li>Points which you earned shown on the bottom of display area.</li>
+    <li>Speed increase by Hitting more and more mole.</li>
+    <li>Level increase by Hitting more and more mole.</li>
+    <li>Game over after span of Two minute.</li>
+    <li>Highest score reflect on top of the display area.</li>
+    <li>Click on refresh ↺ button to reset and start again.</li>
+    <li>Click on cross ❎ button to exit.</li>
+    </ul>
     </div>
     </div>
     }
