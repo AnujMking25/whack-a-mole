@@ -3,16 +3,21 @@ import classess from './Play_area.module.css'
 import Mallet from '../mallet/Mallet'
 import Mole from './mole/Mole'
 import { useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux';
+import {ScoreSliceAction} from '../../store/ScoreSlice'
 const Play_area = () => {
 const [timer,setTimer]=useState(3000);
 const [showMole,setshowMole]=useState(null);
 const [removeMole,setRemoveMole]=useState(null);
+const dispatch=useDispatch();
+
 const score=useSelector(state=>state.currScore.score);
 
 function onRemoveMole(){
   setshowMole(Math.floor(Math.random()*5));
+  dispatch(ScoreSliceAction.scoreCounter({score:10}))
   if(timer>100){
-    setTimer(timer-50)
+    setTimer(timer-30)
   }
   
 }
